@@ -37,19 +37,19 @@ body {
 		left: 200px;
 	}
 
-	a {
+	a {	
 		color: #93c7b8;
-		padding: 41px 15px;
+		padding: 41px 30px;
 		@include transition-property(all);
-    	@include transition-duration(.1s);
+    	@include transition-duration(.15s);
 	}
 
 	a:hover {
-		color: #808080;
+		color: #a0a0a0;
 		cursor: pointer;
 		background-color: #F9F9F5;
 		@include transition-property(all);
-        @include transition-duration(.1s);
+        @include transition-duration(.15s);
 	}
 }
 
@@ -76,4 +76,12 @@ body {
 		color: #808080;
 	}
 
+}
+
+#footer {
+	color: #aaa;
+	font-family: 'Cutive Mono','Lato', 'Helvetica', 'Arial', sans-serif;
+	font-size: 15px;
+	margin: 140px 0 40px 0;
+	text-align: center;
 }
