@@ -11,13 +11,12 @@ body {
 	color: #fff;
 	background-color: #93C4BC;
 	// @include single-box-shadow(rgba(0,0,0,0.1), 0, 1px, 2px, 0px);
-	@include transition-property(background-color);
-    @include transition-duration(.15s);
 
 	ul {
 		padding-top: 40px;
 		padding-left: 330px;
 	}
+	
 	li {
 		display: inline;
 		margin-right: 40px;
@@ -25,15 +24,22 @@ body {
 		font-size: 18px;
 		font-weight: 600;
 	}
+
 	img {
 		position: absolute;
 		top: 10px;
 		left: 200px;
 	}
+
+	a {
+		@include transition-property(color);
+    	@include transition-duration(.15s);
+	}
+
 	a:hover {
 		color: #FEF702;
 		cursor: pointer;
-		@include transition-property(background-color);
+		@include transition-property(color);
         @include transition-duration(.15s);
 	}
 }
