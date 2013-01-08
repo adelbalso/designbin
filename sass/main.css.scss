@@ -3,14 +3,19 @@
 @import "compass/css3/transition";
 
 body {
-	font-family: 'Cutive Mono','Lato', 'Helvetica', sans-serif;
+	font-family: 'Helvetica', 'Arial', sans-serif;
 	background: #FDFEFE;
 }
 
 .navbar {
 	height: 100px;
 	color: #fff;
+	background-color: rgba(255,255,255,.9);
 	@include single-box-shadow(rgba(0,0,0,0.1), 0, 1px, 2px, 0px);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
 
 	ul {
 		padding-top: 40px;
@@ -18,8 +23,9 @@ body {
 	}
 
 	li {
+		font-family: 'Cutive Mono','Lato', 'Helvetica', 'Arial', sans-serif;
 		display: inline;
-		margin-right: 40px;
+		margin-right: 20px;
 		text-transform: lowercase;
 		font-size: 18px;
 		font-weight: 600;
@@ -32,15 +38,42 @@ body {
 	}
 
 	a {
-		color: #93afb5;
-		@include transition-property(color);
-    	@include transition-duration(.15s);
+		color: #93c7b8;
+		padding: 41px 15px;
+		@include transition-property(all);
+    	@include transition-duration(.1s);
 	}
 
 	a:hover {
-		color: #96DCC7;
+		color: #808080;
 		cursor: pointer;
-		@include transition-property(color);
-        @include transition-duration(.15s);
+		background-color: #F9F9F5;
+		@include transition-property(all);
+        @include transition-duration(.1s);
 	}
+}
+
+.container {
+	@include border-radius(3px);
+	z-index: 1;
+	color: #fff;
+	font-weight: 400;
+	font-size: 20px;
+	padding: 50px;
+	margin: 30px 200px;
+	min-height: 300px;
+	min-width: 200px;
+	position: relative;
+	top: 100px;
+
+	&.box1 {
+		color: #fff;
+		background-color: #96DCC7;
+	}
+
+	&.box2 {
+		background-color: #f2f2ea;
+		color: #808080;
+	}
+
 }
