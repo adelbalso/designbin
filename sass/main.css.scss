@@ -2,6 +2,8 @@
 @import "compass/css3";
 @import "compass/css3/transition";
 
+$primary_color: #96DCC7;
+
 body {
 	font-family: 'Helvetica Neue', 'Helvetica' 'Arial', sans-serif;
 	background: #FDFEFE;
@@ -38,7 +40,7 @@ body {
 	}
 
 	a {	
-		color: #93c7b8;
+		color: shade($primary_color, 10%);
 		padding: 41px 10px;
 		@include transition-property(all);
     	@include transition-duration(.15s);
@@ -67,6 +69,36 @@ body {
 	position: relative;
 	top: 100px;
 
+	img {
+		@include single-box-shadow(rgba(0,0,0,1), 0px, 0px, 3px, 0px, inset);
+		@include border-radius(3px);
+		border: 4px solid tint($primary_color, 20%);
+	}
+
+	ul {
+		margin-top: 30px;
+		li {
+			margin-right: 20px;
+			float: left;
+			.caption {
+				font-family: 'Cutive Mono','Lato', 'Helvetica', 'Arial', sans-serif;
+				display: none;
+				position: relative;
+				top: -157px;
+				left: 4px;
+				width: 110px;
+				height: 110px;
+				padding: 20px;
+			}
+			&:hover {
+				.caption {
+					background-color: rgba(0,0,0,.4);
+					display: block;
+				}
+			}
+		}
+	}
+
 	&.box1 {
 		color: #fff;
 		background-color: #96DCC7;
@@ -76,8 +108,9 @@ body {
 		background-color: #f2f2ea;
 		color: #808080;
 	}
-
 }
+
+
 
 #footer {
 	color: #aaa;
