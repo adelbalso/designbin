@@ -7,6 +7,7 @@ $primary_color: #96DCC7;
 body {
 	font-family: 'Helvetica Neue', 'Helvetica' 'Arial', sans-serif;
 	background: #FDFEFE;
+	-webkit-font-smoothing: antialiased;
 }
 
 .navbar {
