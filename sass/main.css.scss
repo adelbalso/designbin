@@ -3,11 +3,16 @@
 @import "compass/css3/transition";
 
 $primary_color: #96DCC7;
+$secondary_color: #f2f2ea;
 
 body {
 	font-family: 'Helvetica Neue', 'Helvetica' 'Arial', sans-serif;
 	background: #FDFEFE;
 	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
 }
 
 .navbar {
@@ -21,7 +26,7 @@ body {
 	z-index: 1000;
 
 	ul {
-		padding-top: 40px;
+		padding-top: 34px;
 		padding-left: 330px;
 	}
 
@@ -32,9 +37,13 @@ body {
 		text-transform: lowercase;
 		font-size: 18px;
 		font-weight: 600;
+		img {
+			position: relative;
+			top: 4px;
+		}
 	}
 
-	img {
+	.brand {
 		position: absolute;
 		top: 10px;
 		left: 200px;
@@ -79,9 +88,10 @@ body {
 	ul {
 		margin-top: 30px;
 		li {
-			margin-right: 20px;
 			float: left;
+			margin-right: 20px;
 			.caption {
+				color: white;
 				font-family: 'Cutive Mono','Lato', 'Helvetica', 'Arial', sans-serif;
 				display: none;
 				position: relative;
@@ -93,7 +103,7 @@ body {
 			}
 			&:hover {
 				.caption {
-					background-color: rgba(0,0,0,.4);
+					background-color: rgba(0,0,0,.3);
 					display: block;
 				}
 			}
@@ -102,16 +112,14 @@ body {
 
 	&.box1 {
 		color: #fff;
-		background-color: #96DCC7;
+		background-color: $primary_color;
 	}
 
 	&.box2 {
-		background-color: #f2f2ea;
+		background-color: $secondary_color;
 		color: #808080;
 	}
 }
-
-
 
 #footer {
 	color: #aaa;
