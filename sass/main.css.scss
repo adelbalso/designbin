@@ -63,6 +63,14 @@ a {
 		background-color: #F9F9F5;
 		@include transition-property(all);
         @include transition-duration(.15s);
+        img {
+        	&#twitter {
+		    	content: url('../images/icons/twitter_hover.png');
+        	}
+        	&#email {
+        		content: url('../images/icons/email_hover.png');
+        	}
+        }
 	}
 }
 
